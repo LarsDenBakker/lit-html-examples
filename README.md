@@ -23,7 +23,9 @@ People starting with LitElement, especially those coming from PolymerElement, of
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/01-computed-properties.js
 * How to observe property changes (property observers from PolymerElement)
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/07-did-render.js
-  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/custom-setter.js
+  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/01-property-setter-observer.js
+* How to render templates from external sources, such as a back-end API or html files imported through webpack
+  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/07-external-templates.js
 
 # Other documentation and videos
 * https://github.com/Polymer/lit-element
@@ -42,8 +44,6 @@ Contributions are appreciated, feel free to submit issues and PRs.
 * _shouldRender
 * until directive
 * external templates / unsafeHTML
-* shared styles
-* shared templates
 * template factories
 * passing props/event handlers to template factories
 * upwards data flow
