@@ -20,6 +20,12 @@ People starting with LitElement, especially those coming from PolymerElement, of
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/6-did-render.js
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/custom-setter.js
 
+# Documentation/videos
+* https://github.com/Polymer/lit-element
+* https://github.com/Polymer/lit-html
+* https://polymer.github.io/lit-html/guide/index.html
+* https://youtu.be/we3lLo-UFtk
+
 # Note
 This project is a community effort. The authors of this repository are not affiliated with Google or the Polymer team. Because LitElement and lit-html are still in early stages of development, best practices and examples will change and evolve over time.
 
