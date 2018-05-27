@@ -4,7 +4,7 @@ class SetBooleanAttributes extends LitElement {
 
   static get properties() {
     return {
-      disabled: String,
+      disabled: Boolean,
     }
   }
 
