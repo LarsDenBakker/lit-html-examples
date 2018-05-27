@@ -9,18 +9,19 @@ const sharedTemplate = html`
   <div>Shared template content</div>
 `;
 
-class ElementA extends LitElement {
+class SharedTemplateA extends LitElement {
 
   _render() {
     return html`
       <style>
         .container {
-          border: 1px solid black;
+          border: 2px solid black;
         }
       </style>
 
       <!-- The shared template is used by this element -->
       <div class="container">
+        Element A
         ${sharedTemplate}
       </div>
     `;
@@ -28,20 +29,21 @@ class ElementA extends LitElement {
 
 }
 
-customElements.define('x-element-a', ElementA);
+customElements.define('x-shared-template-a', SharedTemplateA);
 
-class ElementB extends LitElement {
+class SharedTemplateB extends LitElement {
 
   _render() {
     return html`
       <style>
         .container {
-          border: 1px dotted black;
+          border: 2px dotted black;
         }
       </style>
 
       <!-- The shared template is used by this element -->
       <div class="container">
+        Element B
         ${sharedTemplate}
       </div>
     `;
@@ -49,7 +51,7 @@ class ElementB extends LitElement {
 
 }
 
-customElements.define('x-element-b', ElementB);
+customElements.define('x-shared-template-b', SharedTemplateB);
 
 
 
@@ -58,15 +60,15 @@ class SharedTemplate extends LitElement {
   _render() {
     return html`
       <style>
-        x-element-a,
+        x-shared-template-a,
         x-element-b {
           display: block;
           margin: 8px 0;
         }
       </style>
 
-      <x-element-a></x-element-a>
-      <x-element-b></x-element-b>
+      <x-shared-template-a></x-shared-template-a>
+      <x-shared-template-b></x-shared-template-b>
     `;
   }
 

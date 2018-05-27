@@ -33,11 +33,9 @@ class PropertySetterObserver extends LitElement {
 
   _render({ _focused }) {
     return html`
-      <form id="form">
-        <input id="amountInput" type="number" name="amount" on-blur="${() => this.focused = false}">
-        Focused: ${_focused}
-        <button on-click="${() => this.focused = true}">Focus input</button>
-      </form>
+      <input id="amountInput" type="number" name="amount" on-blur="${() => this.focused = false}">
+      Focused: ${_focused}
+      <button on-click="${() => this.focused = true}">Focus input</button>
     `;
   }
 
