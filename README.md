@@ -9,7 +9,7 @@ People starting with LitElement, especially those coming from PolymerElement, of
 * How to set default properties:
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/1-basic/04-default-property.js
 * How to handle conditional logic (dom-if from PolymerElement):
-  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/1-basic/08-conditional-logic.js
+  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/1-basic/09-conditional-logic.js
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/07-conditional-templates.js
 * How to repeat templates (dom-repeat from PolymerElement):
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/1-basic/10-repeat-templates.js
