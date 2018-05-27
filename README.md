@@ -1,6 +1,9 @@
 # Lit-html examples
 Repository with examples and design patterns for building web components using the LitElement base class, and rendering templates using lit-html.
 
+# Who is this for?
+This repository is intended as a starting point for all people who want to write web components with LitElement. Some special sections are added for people migrating from PolymerElement.
+
 # Frequently asked questions
 People starting with LitElement, especially those coming from PolymerElement, often have these questions:
 * How to set default properties
@@ -8,9 +11,6 @@ People starting with LitElement, especially those coming from PolymerElement, of
 * How to repeat templates (dom-repeat from PolymerElement)
 * How to compute properties (computed properties from PolymerElement)
 * How to observe property changes (property observers from PolymerElement)
-
-# Who is this for?
-This repository is intended as a starting point for all people who want to write web components with LitElement. Some special sections are added for people migrating from PolymerElement.
 
 # Note
 This project is a community effort. The authors of this repository are not affiliated with Google or the Polymer team. Because LitElement and lit-html are still in early stages of development, best practices and examples will change and evolve over time.
