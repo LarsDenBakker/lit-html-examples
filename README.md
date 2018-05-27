@@ -7,17 +7,17 @@ This repository is intended as a starting point for all people who want to write
 # Frequently asked questions
 People starting with LitElement, especially those coming from PolymerElement, often have these questions:
 * How to set default properties:
-  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/1-basic/4-default-property.js
+  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/1-basic/04-default-property.js
 * How to handle conditional logic (dom-if from PolymerElement):
-  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/1-basic/8-conditional-logic.js
-  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/7-conditional-templates.js
+  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/1-basic/08-conditional-logic.js
+  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/07-conditional-templates.js
 * How to repeat templates (dom-repeat from PolymerElement):
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/1-basic/10-repeat-templates.js
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/10-dynamic-repeated-templates.js
 * How to compute properties (computed properties from PolymerElement)
-  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/1-computed-properties.js
+  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/01-computed-properties.js
 * How to observe property changes (property observers from PolymerElement)
-  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/6-did-render.js
+  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/06-did-render.js
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/custom-setter.js
 
 # Documentation/videos
