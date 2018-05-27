@@ -9,8 +9,10 @@ class NestingTemplates extends LitElement {
     return html`
       <span>
         <!--
-          You can nest templates inside each other. To prevent XSS, nested values
-          must always be plain strings or templates produced with html tag literal
+          You can nest templates by using template expressions. To prevent XSS attacks
+          (https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)), HTML strings passed
+          in template expressions are not evaluated. To next templates, values passed in
+          expressions must be created through html template tags as well.
         -->
         ${nestedTemplate}
       </span>

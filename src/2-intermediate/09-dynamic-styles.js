@@ -37,7 +37,7 @@ class DynamicStyles extends LitElement {
 
         <!--
           To update css variables, you can use inline styles. For regular css properties this is an
-          anti-pattern because of css specificity. For css vars this is not an issue, becuase the
+          anti-pattern because of css specificity. For css vars this is not an issue, because the
           specificity is handled where the variables are applied.
         -->
         <div class="text" style$="${`--text-color: ${textColor}`};">

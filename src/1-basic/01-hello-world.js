@@ -5,8 +5,9 @@ import { LitElement, html } from '@polymer/lit-element';
 class HelloWorld extends LitElement {
 
   // The _render callback renders your element's template. This should be a pure function,
-  // always returning the same template given the same properties and not perform any
-  // side effects.
+  // it should always return the same template given the same properties. It should not perform
+  // any side effects such as setting properties or manipulating the DOM. See the did-render
+  // or first-rendered examples if you need side effects.
   _render() {
 
     // Return the template using the html template tag. This will allow lit-html to

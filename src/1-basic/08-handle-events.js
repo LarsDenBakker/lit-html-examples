@@ -18,7 +18,7 @@ class HandleEvents extends LitElement {
     return html`
       <div>
         Current count: [${count}]
-        <!-- Use on-[eventname] syntax to declaratively register event handlers -->
+        <!-- Use on-[eventname] syntax to declaratively register inline event handlers -->
         <button on-click="${() => this.count += 1}">+</button>
 
         <!--

@@ -56,7 +56,7 @@ class SetProperties extends LitElement {
 
         It depends on the element you're rendering if you should use js properties or html attributes.
 
-        See set-attributes example for more.
+        See set-attributes example on how to set attributes.
       -->
       <x-custom-input
         helpText="${helpText}"

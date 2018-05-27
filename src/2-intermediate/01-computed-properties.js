@@ -32,6 +32,8 @@ class ComputedProps extends LitElement {
     //
     // With LitElement, we can just compute the combined properties inside the _render
     // callback.
+    //
+    // Remember, it's all plain javascript so you can use whatever method suits you best.
     const items = this._computeItems(itemsA, itemsB);
 
     return html`

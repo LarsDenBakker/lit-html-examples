@@ -2,7 +2,7 @@ import { LitElement, html } from '@polymer/lit-element';
 
 class PropertyChanges extends LitElement {
 
-  // Any changes to properties define in the static properties will trigger a re-render
+  // Any changes to properties defined in the static properties will trigger a re-render
   // of the component.
   static get properties() {
     return {
@@ -25,7 +25,7 @@ class PropertyChanges extends LitElement {
     }, 2000);
   }
 
-  // The _render callback is called each time any of the defined properties changes.
+  // The _render callback is called each time any of the defined properties change.
   // lit-html is optimized for handling frequent updates and updating the DOM efficiently
   _render({ count }) {
     return html`
