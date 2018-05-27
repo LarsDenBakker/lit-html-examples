@@ -16,7 +16,7 @@ function getVariantTemplate(variant) {
   }
 }
 
-class ConditionalLogic extends LitElement {
+class ConditionalTemplates extends LitElement {
 
   static get properties() {
     return {
@@ -44,4 +44,4 @@ class ConditionalLogic extends LitElement {
 
 }
 
-customElements.define('x-conditional-logic', ConditionalLogic);
+customElements.define('x-conditional-templates', ConditionalTemplates);

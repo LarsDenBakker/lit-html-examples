@@ -1,6 +1,6 @@
 import { LitElement, html } from '@polymer/lit-element';
 
-class Conditionals extends LitElement {
+class ConditionalLogic extends LitElement {
 
   static get properties() {
     return {
@@ -27,4 +27,4 @@ class Conditionals extends LitElement {
 
 }
 
-customElements.define('x-conditionals', Conditionals);
+customElements.define('x-conditional-logic', ConditionalLogic);
