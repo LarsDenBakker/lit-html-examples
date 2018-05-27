@@ -33,6 +33,7 @@ This project is a community effort. The authors of this repository are not affil
 Contributions are appreciated, feel free to submit issues and PRs.
 
 # Examples to be implemented
+* Referencing dom nodes
 * subclassing
 * _shouldRender
 * until directive
