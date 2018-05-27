@@ -4,6 +4,11 @@ Repository with examples and design patterns for building web components using t
 # Who is this for?
 This repository is intended as a starting point for all people who want to write web components with LitElement. Some special sections are added for people migrating from PolymerElement.
 
+# How to use the examples
+You can view the code of the examples by browsing through the src folder on github. The examples are divided into categories of complexity, and are ordered. Concepts are introduced one by one, so that you only see one new concept per example.
+
+All the examples are working code, so you can clone the repository and run `npm install` + `npm start`.
+
 # Frequently asked questions
 People starting with LitElement, especially those coming from PolymerElement, often have these questions:
 * How to set default properties:
@@ -20,7 +25,7 @@ People starting with LitElement, especially those coming from PolymerElement, of
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/06-did-render.js
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/custom-setter.js
 
-# Documentation/videos
+# Other documentation and videos
 * https://github.com/Polymer/lit-element
 * https://github.com/Polymer/lit-html
 * https://polymer.github.io/lit-html/guide/index.html
