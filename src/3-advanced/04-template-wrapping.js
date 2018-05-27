@@ -1,4 +1,4 @@
-import { LitElement, html } from '../../bower_components/ing-lit-html';
+import { LitElement, html } from '@polymer/lit-element';
 
 // Because templates are just variables, you can pass them around in functions.
 // Based on certain conditions, you can wrap a template.
@@ -26,7 +26,7 @@ function getItemTemplate(item) {
   return wrapItemTemplate(item, baseTemplate);
 }
 
-class ConditionalWrapping extends LitElement {
+class TemplateWrapping extends LitElement {
 
   static get properties() {
     return {
@@ -53,4 +53,4 @@ class ConditionalWrapping extends LitElement {
 
 }
 
-customElements.define('x-template-wrapping', ConditionalWrapping);
+customElements.define('x-template-wrapping', TemplateWrapping);

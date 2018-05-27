@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="../../node_modules/webcomponentsjs/webcomponents-loader.js"></script>
+
+  <style>
+    .elements-demo {
+      max-width: 800px;
+      margin: 24px auto;
+    }
+
+    .elements-demo>div>*:not(strong) {
+      display: block;
+      border: 1px solid black;
+      padding: 8px;
+      margin: 8px 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <div class="elements-demo">
+    <h1>Advanced examples</h1>
+
+    <div>
+      <strong>Observe property changes by writing custom setters:</strong>
+      <x-property-setter-observer></x-property-setter-observer>
+    </div>
+
+    <div>
+      <strong>Render promises:</strong>
+      <x-render-promises></x-render-promises>
+    </div>
+
+    <div>
+      <strong>Show placeholder content while loading a promise:</strong>
+      <x-until-directive></x-until-directive>
+    </div>
+
+    <div>
+      <strong>Conditionally wrap templates:</strong>
+      <x-template-wrapping></x-template-wrapping>
+    </div>
+
+  </div>
+
+  <script type="module" src="./01-property-setter-observer.js"></script>
+  <script type="module" src="./02-render-promises.js"></script>
+  <script type="module" src="./03-until-directive.js"></script>
+  <script type="module" src="./04-template-wrapping.js"></script>
+</body>
+
+</html>
