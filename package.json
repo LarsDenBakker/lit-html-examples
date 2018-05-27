@@ -1,0 +1,17 @@
+{
+  "name": "lit-html-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "polymer serve --open --open-path /"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@polymer/lit-element": "^0.5.1",
+    "lit-html": "^0.10.0",
+    "polymer-cli": "^1.7.2"
+  },
+  "devDependencies": {}
+}

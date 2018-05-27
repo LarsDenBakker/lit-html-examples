@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="../../node_modules/webcomponentsjs/webcomponents-loader.js"></script>
+
+  <style>
+    .elements-demo {
+      max-width: 800px;
+      margin: 24px auto;
+    }
+
+    .elements-demo>div>*:not(strong) {
+      display: block;
+      border: 1px solid black;
+      padding: 8px;
+      margin: 8px 0;
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <div class="elements-demo">
+    <h1>Intermediate examples</h1>
+
+    <div>
+      <strong>Compute properties based on other properties:</strong>
+      <x-computed-properties></x-computed-properties>
+    </div>
+
+    <div>
+      <strong>Update object properties:</strong>
+      <x-update-object-properties></x-update-object-properties>
+    </div>
+
+    <div>
+      <strong>Update array properties:</strong>
+      <x-update-array-properties></x-update-array-properties>
+    </div>
+
+    <div>
+      <strong>Set boolean attributes:</strong>
+      <x-set-boolean-attributes></x-set-boolean-attributes>
+    </div>
+
+    <div>
+      <strong>Handle work that should be done once, after the first time the element was rendered:</strong>
+      <x-first-rendered></x-first-rendered>
+    </div>
+
+    <div>
+      <strong>Handle work that should be done each time the element rendered, or to respond to property changes:</strong>
+      <x-did-render></x-did-render>
+    </div>
+
+    <div>
+      <strong>Write conditional logic in your templates:</strong>
+      <x-conditional-logic variant="a"></x-conditional-logic>
+    </div>
+
+    <div>
+      <strong>Compose templates by nesting them:</strong>
+      <x-nesting-templates></x-nesting-templates>
+    </div>
+
+    <div>
+      <strong>Handle dynamic styles which change according to properties:</strong>
+      <x-dynamic-styles></x-dynamic-styles>
+    </div>
+
+    <div>
+      <strong>Handle dynamic lists/repeated templates that update frequently:</strong>
+      <x-dynamic-repeated-templates></x-dynamic-repeated-templates>
+    </div>
+
+  </div>
+
+  <script type="module" src="./1-computed-properties.js"></script>
+  <script type="module" src="./2-update-object-properties.js"></script>
+  <script type="module" src="./3-update-array-properties.js"></script>
+  <script type="module" src="./4-set-boolean-attributes.js"></script>
+  <script type="module" src="./5-first-rendered.js"></script>
+  <script type="module" src="./6-did-render.js"></script>
+  <script type="module" src="./7-conditional-logic.js"></script>
+  <script type="module" src="./8-nesting-templates.js"></script>
+  <script type="module" src="./9-dynamic-styles.js"></script>
+  <script type="module" src="./10-dynamic-repeated-templates.js"></script>
+</body>
+
+</html>
