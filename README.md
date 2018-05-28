@@ -44,8 +44,5 @@ Contributions are appreciated, feel free to submit issues and PRs.
 # Examples to be implemented
 * subclassing
 * _shouldRender
-* until directive
-* template factories
-* passing props/event handlers to template factories
 * upwards data flow
 * link to documentation on design choices (unidirectional data flow etc.)
