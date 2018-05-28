@@ -26,6 +26,8 @@ People starting with LitElement, especially those coming from PolymerElement, of
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/01-property-setter-observer.js
 * How to render templates from external sources, such as a back-end API or html files imported through webpack
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/07-external-template.js
+* How to separate CSS, HTML and JS in different files:
+  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/09-separate-css-html-js-element.js
 
 # Other documentation and videos
 * https://github.com/Polymer/lit-element
@@ -43,7 +45,6 @@ Contributions are appreciated, feel free to submit issues and PRs.
 * subclassing
 * _shouldRender
 * until directive
-* external templates / unsafeHTML
 * template factories
 * passing props/event handlers to template factories
 * upwards data flow
