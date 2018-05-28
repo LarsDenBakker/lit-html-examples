@@ -46,3 +46,4 @@ Contributions are appreciated, feel free to submit issues and PRs.
 * _shouldRender
 * upwards data flow
 * link to documentation on design choices (unidirectional data flow etc.)
+* Implement other components (Polymer) in intermediate
