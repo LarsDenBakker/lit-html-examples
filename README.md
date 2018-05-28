@@ -29,11 +29,8 @@ People starting with LitElement, especially those coming from PolymerElement, of
 * How to separate CSS, HTML and JS in different files:
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/09-separate-css-html-js-element.js
 
-# Other documentation and videos
-* https://github.com/Polymer/lit-element
-* https://github.com/Polymer/lit-html
-* https://polymer.github.io/lit-html/guide/index.html
-* https://youtu.be/we3lLo-UFtk
+# Further reading
+* Use https://github.com/web-padawan/awesome-lit-html as a starting pointer for further documentation.
 
 # Note
 This project is a community effort. The authors of this repository are not affiliated with Google or the Polymer team. Because LitElement and lit-html are still in early stages of development, best practices and examples will change and evolve over time.
