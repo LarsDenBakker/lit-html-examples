@@ -4,7 +4,7 @@ class UpdateArrayProperties extends LitElement {
 
   static get properties() {
     return {
-      messages: Object
+      messages: Array
     }
   }
 

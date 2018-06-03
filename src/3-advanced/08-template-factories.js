@@ -13,8 +13,8 @@ import { LitElement, html } from '@polymer/lit-element';
 const templateFactory = (inputValue, buttonText, onSubmit) => html`
   <input id="usernameInput" value="${inputValue}">
 
-  <button on-click="${onSubmit}"
-    >${buttonText}
+  <button on-click="${onSubmit}">
+    ${buttonText}
   </button>
 `;
 
