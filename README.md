@@ -39,10 +39,3 @@ This project is a community effort. The authors of this repository are not affil
 
 # Contributing
 Contributions are appreciated, feel free to submit issues and PRs.
-
-# Examples to be implemented
-* subclassing
-* _shouldRender
-* upwards data flow
-* link to documentation on design choices (unidirectional data flow etc.)
-* Implement other components (Polymer) in intermediate
