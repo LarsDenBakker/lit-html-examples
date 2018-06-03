@@ -28,6 +28,8 @@ People starting with LitElement, especially those coming from PolymerElement, of
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/07-external-template.js
 * How to separate CSS, HTML and JS in different files:
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/09-separate-css-html-js-element.js
+* How to reflect properties to attributes:
+  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/12-reflect-property-to-attribute.js
 
 # Further reading
 * Use https://github.com/web-padawan/awesome-lit-html as a starting pointer for further documentation.
