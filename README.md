@@ -1,3 +1,6 @@
+# Note
+This repository uses an outdated syntax for lit-html. I recommend looking into https://github.com/thepassle/create-lit-app for up to date examples and more information.
+
 # Lit-html examples
 Repository with examples and design patterns for building web components using the LitElement base class, and rendering templates using lit-html.
 
