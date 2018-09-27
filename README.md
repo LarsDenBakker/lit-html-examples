@@ -1,6 +1,3 @@
-# Note
-This repository uses an outdated syntax for lit-html. I recommend looking into https://github.com/thepassle/create-lit-app for up to date examples and more information.
-
 # Lit-html examples
 Repository with examples and design patterns for building web components using the LitElement base class, and rendering templates using lit-html.
 
@@ -25,7 +22,7 @@ People starting with LitElement, especially those coming from PolymerElement, of
 * How to compute properties (computed properties from PolymerElement)
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/01-computed-properties.js
 * How to observe property changes (property observers from PolymerElement)
-  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/07-did-render.js
+  * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/2-intermediate/07-updated.js
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/01-property-setter-observer.js
 * How to render templates from external sources, such as a back-end API or html files imported through webpack
   * https://github.com/LarsDenBakker/lit-html-examples/blob/master/src/3-advanced/07-external-template.js
@@ -36,6 +33,7 @@ People starting with LitElement, especially those coming from PolymerElement, of
 
 # Further reading
 * Use https://github.com/web-padawan/awesome-lit-html as a starting pointer for further documentation.
+* Use https://github.com/thepassle/create-lit-app as a reference for building a lit-html app with preset and ready to use Redux and Webpack configurations. 
 
 # Note
 This project is a community effort. The authors of this repository are not affiliated with Google or the Polymer team. Because LitElement and lit-html are still in early stages of development, best practices and examples will change and evolve over time.
