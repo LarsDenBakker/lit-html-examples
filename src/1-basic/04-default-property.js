@@ -4,7 +4,7 @@ class DefaultProperty extends LitElement {
 
   static get properties() {
     return {
-      score: Number,
+      score: { type: Number },
     };
   }
 
@@ -15,10 +15,10 @@ class DefaultProperty extends LitElement {
     this.score = 20;
   }
 
-  _render({ score }) {
+  render() {
     return html`
       <div>
-        Score: ${score}
+        Score: ${this.score}
       </div>
     `;
   }

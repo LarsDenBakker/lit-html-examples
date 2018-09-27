@@ -2,7 +2,7 @@ import { LitElement, html } from '@polymer/lit-element';
 
 class RenderStyles extends LitElement {
 
-  _render() {
+  render() {
     return html`
       <!--
         Style tags placed inside LitElement templates will place the styles inside

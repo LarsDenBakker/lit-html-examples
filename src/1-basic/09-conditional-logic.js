@@ -4,22 +4,22 @@ class ConditionalLogic extends LitElement {
 
   static get properties() {
     return {
-      showMessage: Boolean,
-      message: String,
+      showMessage: { type: Boolean },
+      message: { type: String },
     };
   }
 
-  _render({ showMessage, message }) {
+  render() {
     return html`
       <div>
-        <button on-click="${() => this.showMessage = !this.showMessage}">
+        <button @click="${() => this.showMessage = !this.showMessage}">
           <!-- You can use ternary expressions for quick conditional logic -->
-          Click to ${showMessage ? 'hide' : 'show'} message
+          Click to ${this.showMessage ? 'hide' : 'show'} message
         </button>
 
         <!-- Or to conditionally show/hide text -->
-        ${showMessage
-          ? html`The message is: ${message}`
+        ${this.showMessage
+          ? html`The message is: ${this.message}`
           : ''}
       </div>
     `;

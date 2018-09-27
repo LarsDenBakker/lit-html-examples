@@ -24,7 +24,7 @@ const sharedStyles = html`
 
 class SharedStylesA extends LitElement {
 
-  _render() {
+  render() {
     return html`
       <!-- Pull in shared styles -->
       ${sharedStyles}
@@ -42,7 +42,7 @@ customElements.define('x-shared-styles-a', SharedStylesA);
 
 class SharedStylesB extends LitElement {
 
-  _render() {
+  render() {
     return html`
       <!-- Pull in shared styles -->
       ${sharedStyles}
@@ -69,7 +69,7 @@ customElements.define('x-shared-styles-b', SharedStylesB);
 
 class SharedStyles extends LitElement {
 
-  _render() {
+  render() {
     return html`
       <style>
         x-shared-styles-a,

@@ -10,7 +10,7 @@ export const getTemplate = (props) => html`
   </ul>
 `;
 
-// Because it's just javascript, you can split up the template into separte parts which makes it much easier
+// Because it's just javascript, you can split up the template into separate parts which makes it much easier
 // to manage large templates.
 const todoItemTemplate = (item) => html`
   <li class="todo-item">

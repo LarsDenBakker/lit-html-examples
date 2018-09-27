@@ -1,11 +1,11 @@
 import { LitElement, html } from '@polymer/lit-element';
-import { until } from 'lit-html/lib/until';
+import { until } from 'lit-html/directives/until';
 
 class UntilDirective extends LitElement {
 
   static get properties() {
     return {
-      messageRequest: String,
+      messageRequest: { type: String },
     };
   }
 
@@ -14,7 +14,7 @@ class UntilDirective extends LitElement {
     this._fetchMessage();
   }
 
-  _render({ messageRequest }) {
+  render() {
     return html`
       <div>
         <!--
@@ -22,9 +22,9 @@ class UntilDirective extends LitElement {
           You can use the until directive for this. The first paramter should be the promise to render,
           the second parameter is the template that is rendered during loading.
         -->
-        ${until(messageRequest, html`Loading...`)}
+        ${until(this.messageRequest, html`Loading...`)}
 
-        <button on-click="${() => this._fetchMessage()}">
+        <button @click="${() => this._fetchMessage()}">
           Fetch message
         </button>
       </div>

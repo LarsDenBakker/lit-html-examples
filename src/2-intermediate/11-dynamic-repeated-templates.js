@@ -1,11 +1,11 @@
 import { LitElement, html } from '@polymer/lit-element';
-import { repeat } from 'lit-html/lib/repeat';
+import { repeat } from 'lit-html/directives/repeat';
 
 class DynamicRepeatedTemplates extends LitElement {
 
   static get properties() {
     return {
-      items: Array,
+      items: { type: Array },
     };
   }
 
@@ -20,27 +20,27 @@ class DynamicRepeatedTemplates extends LitElement {
     ];
   }
 
-  _render({ items }) {
+  render() {
     return html`
       <div>
-        <button on-click="${() => this.reorder()}">Re-order items (random)</button>
+        <button @click="${() => this.reorder()}">Re-order items (random)</button>
         <!--
           For dynamic lists that are re-ordered frequently, you can use the repeat directive.
-          This directive handles efficient re-ordering of dom-nodes without unnecesarily recreating them.
+          This directive handles efficient re-ordering of dom-nodes without unnecessarily recreating them.
 
           For this to work, items in the list should be unique. An identify function is passed to
           tell the directive how to identify individual items.
         -->
         ${repeat(
-          items, // the array of items
+          this.items, // the array of items
           item => item.id, // the identify function
-          (item, i) => html`<div>Message ${item.i}: ${item.message}</div>` // the template for each item
+          (item, i) => html`<div>[${i}] Message ${item.id}: ${item.message}</div>` // the template for each item
         )}
       </div>
     `;
   }
 
-  /* re-orders items randonmly */
+  /* re-orders items randomly */
   reorder() {
     this.items = [...this.items.sort(() => Math.floor(Math.random() * 3) + -1)];
   }

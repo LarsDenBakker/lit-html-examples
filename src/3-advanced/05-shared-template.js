@@ -11,7 +11,7 @@ const sharedTemplate = html`
 
 class SharedTemplateA extends LitElement {
 
-  _render() {
+  render() {
     return html`
       <style>
         .container {
@@ -33,7 +33,7 @@ customElements.define('x-shared-template-a', SharedTemplateA);
 
 class SharedTemplateB extends LitElement {
 
-  _render() {
+  render() {
     return html`
       <style>
         .container {
@@ -57,7 +57,7 @@ customElements.define('x-shared-template-b', SharedTemplateB);
 
 class SharedTemplate extends LitElement {
 
-  _render() {
+  render() {
     return html`
       <style>
         x-shared-template-a,

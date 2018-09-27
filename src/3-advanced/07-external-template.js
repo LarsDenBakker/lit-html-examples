@@ -1,5 +1,5 @@
 import { LitElement, html } from '@polymer/lit-element';
-import { unsafeHTML } from 'lit-html/lib/unsafe-html';
+import { unsafeHTML } from 'lit-html/directives/unsafe-html';
 
 // Lit-html has strict rules on what's allowed to be rendered in order to prevent
 // XSS attacks (https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)).
@@ -19,7 +19,7 @@ const externalTemplate = `
 
 class ExternalTemplate extends LitElement {
 
-  _render() {
+  render() {
     return html`
       Content rendered in lit-html
 

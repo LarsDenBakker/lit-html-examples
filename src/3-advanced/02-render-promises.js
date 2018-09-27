@@ -4,7 +4,7 @@ class RenderPromises extends LitElement {
 
   static get properties() {
     return {
-      messageRequest: String,
+      messageRequest: { type: String },
     };
   }
 
@@ -14,7 +14,7 @@ class RenderPromises extends LitElement {
     this.messageRequest = this._fakeFetchMessage();
   }
 
-  _render({ messageRequest }) {
+  render() {
     return html`
       <div>
         <!--
@@ -24,7 +24,7 @@ class RenderPromises extends LitElement {
 
           lit-html handles race conditions, so only the last promises will be rendered
         -->
-        The message will appear after 2sec: <em>${messageRequest}</em>
+        The message will appear after 2sec: <em>${this.messageRequest}</em>
       </div>
     `;
   }

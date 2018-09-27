@@ -11,13 +11,11 @@ class Properties extends LitElement {
   // deserialization method to add custom types.
   static get properties() {
     return {
-      message: String,
+      message: { type: String },
     };
   }
 
-  // The _render callback receives the current value of all defined properties, so that you can
-  // use them in your template.
-  _render(props) {
+  render() {
     return html`
       <div>
         <!--
@@ -27,10 +25,10 @@ class Properties extends LitElement {
         -->
 
         <!-- Render a string directly -->
-        The message is: ${props.message}
+        The message is: ${this.message}
 
         <!-- Call a function and render the return value -->
-        The reversed message is: ${this.reverseMessage(props.message)}
+        The reversed message is: ${this.reverseMessage(this.message)}
       </div>
     `;
   }

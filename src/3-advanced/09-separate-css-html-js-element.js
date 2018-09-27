@@ -27,7 +27,7 @@ class SeparateCssHtmlJs extends LitElement {
 
   static get properties() {
     return {
-      todoItems: Array,
+      todoItems: { type: Array },
     }
   }
 
@@ -42,9 +42,9 @@ class SeparateCssHtmlJs extends LitElement {
     ]
   }
 
-  _render(props) {
+  render() {
     // Compute the template based on the current properties
-    const template = getTemplate(props);
+    const template = getTemplate(this);
 
     return html`
       <!-- Apply the styles to our template -->

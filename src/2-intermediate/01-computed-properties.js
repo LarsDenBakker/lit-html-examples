@@ -4,10 +4,10 @@ class ComputedProps extends LitElement {
 
   static get properties() {
     return {
-      itemsA: Array,
-      itemsB: Array,
-      amountA: Number,
-      amountB: Number,
+      itemsA: { type: Array },
+      itemsB: { type: Array },
+      amountA: { type: Number },
+      amountB: { type: Number },
     };
   }
 
@@ -26,21 +26,21 @@ class ComputedProps extends LitElement {
     return this.amountA + this.amountB;
   }
 
-  _render({ itemsA, itemsB, amountA, amountB }) {
+  render() {
     // With Polymer template, we had to set up special bindings for properties that
     // combine to create new values so that the template system picks up the changes.
     //
-    // With LitElement, we can just compute the combined properties inside the _render
+    // With LitElement, we can just compute the combined properties inside the render
     // callback.
     //
     // Remember, it's all plain javascript so you can use whatever method suits you best.
-    const items = this._computeItems(itemsA, itemsB);
+    const items = this._computeItems(this.itemsA, this.itemsB);
 
     return html`
       <div>The computed messages are: [${items.join(', ')}]</div>
 
       <!-- For simple computed properties, you can just compute them inline -->
-      <div>The computed amount is: [${amountA + amountB}]</div>
+      <div>The computed amount is: [${this.amountA + this.amountB}]</div>
     `;
   }
 

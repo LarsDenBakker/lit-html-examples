@@ -1,11 +1,11 @@
 import { LitElement, html } from '@polymer/lit-element';
 
-class ShouldRender extends LitElement {
+class ShouldUpdate extends LitElement {
 
   static get properties() {
     return {
-      active: Boolean,
-      count: Number,
+      active: { type: Boolean },
+      count: { type: Number },
     };
   }
 
@@ -23,24 +23,25 @@ class ShouldRender extends LitElement {
     }, 1000);
   }
 
-  _render({ count }) {
+  render() {
     return html`
-      Current count: ${count}
+      Current count: ${this.count}
 
-      <button on-click="${() => this.active = !this.active}">
+      <button @click="${() => this.active = !this.active}">
         Toggle active
       </button>
     `;
   }
 
-  // The _shouldRender function receives the current, changes and previous properties.
+  // The shouldUpdate function receives a map with keys for the changed properties
+  // pointing to their previous values.
   // Based on this, you can decide whether the component should re-render on not. This
   // is useful to for example block re-rendering of the component while it is not active
   // or in view.
-  _shouldRender(props, changesProps, prevProps) {
-    return props.active;
+  shouldUpdate(changedProperties) {
+    return this.active;
   }
 
 }
 
-customElements.define('x-should-render', ShouldRender);
+customElements.define('x-should-update', ShouldUpdate);

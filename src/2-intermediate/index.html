@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <script src="../../node_modules/webcomponentsjs/webcomponents-loader.js"></script>
+  <script src="../../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 
   <style>
     .elements-demo {
@@ -53,12 +53,12 @@
 
     <div>
       <strong>Handle work that should be done once, after the first time the element was rendered:</strong>
-      <x-first-rendered></x-first-rendered>
+      <x-first-updated></x-first-updated>
     </div>
 
     <div>
       <strong>Handle work that should be done each time the element rendered, or to respond to property changes:</strong>
-      <x-did-render></x-did-render>
+      <x-updated></x-updated>
     </div>
 
     <div>
@@ -93,8 +93,8 @@
   <script type="module" src="./03-update-array-properties.js"></script>
   <script type="module" src="./04-set-boolean-attributes.js"></script>
   <script type="module" src="./05-query-dom-nodes.js"></script>
-  <script type="module" src="./06-first-rendered.js"></script>
-  <script type="module" src="./07-did-render.js"></script>
+  <script type="module" src="./06-first-updated.js"></script>
+  <script type="module" src="./07-updated.js"></script>
   <script type="module" src="./08-conditional-templates.js"></script>
   <script type="module" src="./09-nesting-templates.js"></script>
   <script type="module" src="./10-dynamic-styles.js"></script>
