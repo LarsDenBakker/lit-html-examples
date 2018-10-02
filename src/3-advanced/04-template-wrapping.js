@@ -11,7 +11,7 @@ function wrapItemTemplate(item, template) {
     case 'button':
       return html`<button>${template}</button>`;
     case 'link':
-      return html`<a href$="${item.url}">${template}</a>`;
+      return html`<a href="${item.url}">${template}</a>`;
     default:
       return template;
   }
@@ -30,7 +30,7 @@ class TemplateWrapping extends LitElement {
 
   static get properties() {
     return {
-      items: Array,
+      items: { type: Array },
     };
   }
 
@@ -44,10 +44,10 @@ class TemplateWrapping extends LitElement {
     ];
   }
 
-  _render({ items }) {
+  render() {
     return html`
       <!-- Map each items to it's own template -->
-      ${items.map(getItemTemplate)}
+      ${this.items.map(getItemTemplate)}
     `;
   }
 

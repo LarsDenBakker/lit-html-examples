@@ -4,8 +4,8 @@ class DynamicStyles extends LitElement {
 
   static get properties() {
     return {
-      bold: Boolean,
-      textColor: String,
+      bold: { type: Boolean },
+      textColor: { type: String },
     };
   }
 
@@ -16,7 +16,7 @@ class DynamicStyles extends LitElement {
     this.textColor = 'blue';
   }
 
-  _render({ bold, textColor }) {
+  render() {
     return html`
       <style>
         :host {
@@ -33,27 +33,27 @@ class DynamicStyles extends LitElement {
       </style>
 
       <!-- You can set classes dynamically based on properties -->
-      <div class$="${bold ? 'bold' : ''}">
+      <div class="${this.bold ? 'bold' : ''}">
 
         <!--
           To update css variables, you can use inline styles. For regular css properties this is an
           anti-pattern because of css specificity. For css vars this is not an issue, because the
           specificity is handled where the variables are applied.
         -->
-        <div class="text" style$="${`--text-color: ${textColor}`};">
+        <div class="text" .style="${`--text-color: ${this.textColor}`};">
           Hello world!
         </div>
       </div>
 
       <div>
-        <input id="colorInput" value="${textColor}">
-        <button id="colorButton" on-click="${() => this._updateColor()}">
+        <input id="colorInput" value="${this.textColor}">
+        <button id="colorButton" @click="${() => this._updateColor()}">
           Set color
         </button>
       </div>
 
       <div>
-        <button id="boldButton" on-click="${() => this._updateBold()}">Toggle bold</button>
+        <button id="boldButton" @click="${() => this._updateBold()}">Toggle bold</button>
       </div>
     `;
   }
@@ -62,7 +62,7 @@ class DynamicStyles extends LitElement {
     this.textColor = this.shadowRoot.getElementById('colorInput').value;
   }
 
-  _updateBold(e) {
+  _updateBold() {
     this.bold = !this.bold;
   }
 

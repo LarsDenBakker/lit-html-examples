@@ -4,7 +4,7 @@ class PropertySetterObserver extends LitElement {
 
   static get properties() {
     return {
-      _focused: Boolean
+      _focused: { type: Boolean },
     }
   }
 
@@ -31,11 +31,11 @@ class PropertySetterObserver extends LitElement {
     }
   }
 
-  _render({ _focused }) {
+  render() {
     return html`
-      <input id="amountInput" type="number" name="amount" on-blur="${() => this.focused = false}">
-      Focused: ${_focused}
-      <button on-click="${() => this.focused = true}">Focus input</button>
+      <input id="amountInput" type="number" name="amount" @blur="${() => this.focused = false}">
+      Focused: ${this._focused}
+      <button @click="${() => this.focused = true}">Focus input</button>
     `;
   }
 

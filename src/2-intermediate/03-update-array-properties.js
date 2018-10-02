@@ -4,7 +4,7 @@ class UpdateArrayProperties extends LitElement {
 
   static get properties() {
     return {
-      messages: Array
+      messages: { type: Array },
     }
   }
 
@@ -14,11 +14,11 @@ class UpdateArrayProperties extends LitElement {
     this.messages = ['hello', 'world'];
   }
 
-  _render({ messages }) {
+  render() {
     return html`
-      Messages: [${messages.join(', ')}]
+      Messages: [${this.messages.join(', ')}]
       <input id="messageInput" placeholder="message">
-      <button on-click="${() => this._onMessageSubmitA()}">Add message</button>
+      <button @click="${() => this._onMessageSubmitA()}">Add message</button>
     `;
   }
 
@@ -31,17 +31,17 @@ class UpdateArrayProperties extends LitElement {
 
   // Updating arrays works the same as updating objects. See object example for more info
 
-  // You can use the mutable approach, where you mutate the existing array and request a render
+  // You can use the mutable approach, where you mutate the existing array and request an update
   _onMessageSubmitA() {
     const message = this._getInput();
     if (message && message.length) {
       this.messages.push(message);
-      this._requestRender();
+      this.requestUpdate();
     }
   }
 
   // Or you can use the immutable approach, where a new array is created and the change is picked up
-  _onUsernameSubmitB() {
+  _onMessageSubmitB() {
     const message = this._getInput();
     if (message && message.length) {
       this.messages = [...this.messages, message];

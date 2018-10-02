@@ -4,7 +4,7 @@ class QueryDomNodes extends LitElement {
 
   static get properties() {
     return {
-      users: Array,
+      users: { type: Array },
     }
   }
 
@@ -21,7 +21,7 @@ class QueryDomNodes extends LitElement {
   // Be aware that the first render of the element happens async, so the requested dom nodes might
   // not be available when running this function.
   //
-  // See the first-rendered and did-render examples for ways to access dom nodes more safely
+  // See the first-updated and updated examples for ways to access dom nodes more safely
   get usernameInput() {
     return this.shadowRoot.getElementById('usernameInput');
   }
@@ -31,13 +31,13 @@ class QueryDomNodes extends LitElement {
     return this.usernameInput.value;
   }
 
-  _render({ users }) {
+  render() {
     return html`
       <input id="usernameInput" name="username">
-      <button on-click="${() => this._addUsername()}">Add user</button>
+      <button @click="${() => this._addUsername()}">Add user</button>
 
       <ul>
-        ${users.map(user => html`<li>${user}</li>`)}
+        ${this.users.map(user => html`<li>${user}</li>`)}
       </ul>
     `;
   }

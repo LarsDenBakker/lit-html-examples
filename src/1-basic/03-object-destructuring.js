@@ -4,11 +4,11 @@ class ObjectDestructuring extends LitElement {
 
   static get properties() {
     return {
-      message: String,
+      message: { type: String },
     };
   }
 
-  // A common pattern is to destructure the properties parameter in the _render method. This deconstructs the properties
+  // A common pattern is to destructure the properties in the render method. This deconstructs the `this`
   // object into the individual properties, so that they can be referenced more conveniently as individual variables.
   //
   // For example:
@@ -25,7 +25,8 @@ class ObjectDestructuring extends LitElement {
   // foo(myObject); // Logs 3.
   //
   // See: https://developer.mozilla.org/nl/docs/Web/JavaScript/Reference/Operatoren/Destructuring_assignment for more info.
-  _render({ message }) {
+  render() {
+    const { message } = this;
     return html`
       <div>
         The message is: ${message}

@@ -5,7 +5,7 @@ const nestedTemplate = html`<div>A static nested template.</div>`;
 
 class NestingTemplates extends LitElement {
 
-  _render() {
+  render() {
     return html`
       <span>
         <!--

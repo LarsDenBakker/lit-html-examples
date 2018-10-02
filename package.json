@@ -9,10 +9,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@polymer/lit-element": "^0.5.1",
-    "@polymer/paper-button": "^3.0.0-pre.19",
-    "lit-html": "^0.10.0",
-    "polymer-cli": "^1.7.2"
+    "@polymer/lit-element": "^0.6.1",
+    "@polymer/paper-button": "^3.0.1",
+    "@webcomponents/webcomponentsjs": "^2.0.0",
+    "lit-html": "^0.11.4",
+    "polymer-cli": "^1.8.0"
   },
   "devDependencies": {}
 }

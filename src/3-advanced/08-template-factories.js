@@ -1,7 +1,7 @@
 import { LitElement, html } from '@polymer/lit-element';
 
 // Here we define a template which as a function that accepts a set of variables
-// and returns lit html template. This is actually identicaly to how the _render
+// and returns lit html template. This is actually identical to how the render
 // function works.
 //
 // This function could be defined in a separate, shared, file or just be a nice
@@ -13,7 +13,7 @@ import { LitElement, html } from '@polymer/lit-element';
 const templateFactory = (inputValue, buttonText, onSubmit) => html`
   <input id="usernameInput" value="${inputValue}">
 
-  <button on-click="${onSubmit}">
+  <button @click="${onSubmit}">
     ${buttonText}
   </button>
 `;
@@ -22,7 +22,7 @@ class TemplateFactories extends LitElement {
 
   static get properties() {
     return {
-      username: String
+      username: { type: String },
     };
   }
 
@@ -32,13 +32,13 @@ class TemplateFactories extends LitElement {
     this.username = 'Steve';
   }
 
-  _render({ username }) {
+  render() {
     return html`
       <!--
         Call the template factory with a property, string constant
         and a method reference for the event handler
       -->
-      ${templateFactory(username, 'Change username', this._onUsernameSubmit.bind(this))}
+      ${templateFactory(this.username, 'Change username', this._onUsernameSubmit.bind(this))}
     `;
   }
 

@@ -4,7 +4,7 @@ class SetBooleanAttributes extends LitElement {
 
   static get properties() {
     return {
-      disabled: Boolean,
+      disabled: { type: Boolean },
     }
   }
 
@@ -14,19 +14,19 @@ class SetBooleanAttributes extends LitElement {
     this.disabled = true;
   }
 
-  _render({ disabled }) {
+  render() {
     return html`
       <!--
         In HTML, boolean attributes can only be set to true imperatively. The presence of the attribute
         always implies true. So <button disabled="false"></button> will still set disabled to true.
 
-        To bind a js boolean property to a html attribute, postfix the disabled attribute with a ?
+        To bind a js boolean property to a html attribute, prefix the disabled attribute with a ?
       -->
-      <button disabled?="${disabled}">
+      <button ?disabled="${this.disabled}">
         Submit button
       </button>
 
-      <button on-click="${() => this.disabled = !this.disabled}">
+      <button @click="${() => this.disabled = !this.disabled}">
         Toggle disabled
       </button>
     `;

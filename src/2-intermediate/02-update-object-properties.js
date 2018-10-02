@@ -4,7 +4,7 @@ class UpdateObjectProperties extends LitElement {
 
   static get properties() {
     return {
-      user: Object
+      user: { type: Object },
     }
   }
 
@@ -14,11 +14,11 @@ class UpdateObjectProperties extends LitElement {
     this.user = { id: 1, username: 'Steve' };
   }
 
-  _render({ user }) {
+  render() {
     return html`
-      Id: [${user.id}] Username: [${user.username}]
-      <input id="usernameInput" value="${user.username}" placeholder="username">
-      <button on-click="${() => this._onUsernameSubmitA()}">Set value</button>
+      Id: [${this.user.id}] Username: [${this.user.username}]
+      <input id="usernameInput" value="${this.user.username}" placeholder="username">
+      <button @click="${() => this._onUsernameSubmitA()}">Set value</button>
     `;
   }
 
@@ -32,13 +32,13 @@ class UpdateObjectProperties extends LitElement {
     this.user.username = username;
 
     // Because the actual user object itself did not change, LitElement will not pick
-    // up the change so we need to request a render manually.
-    this._requestRender();
+    // up the change so we need to request an update manually.
+    this.requestUpdate();
 
     // If you want to do follow up actions, such as firing an event, it can be useful to
     // wait for the requested render to complete. Because this is async, you can use the
-    // renderComplete promise to wait for the render.
-    this.renderComplete.then(() => {
+    // updateComplete promise to wait for the update.
+    this.updateComplete.then(() => {
       this.dispatchEvent(new CustomEvent('username-updated', { detail: username }));
     });
   }

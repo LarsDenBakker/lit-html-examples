@@ -4,7 +4,7 @@ class RepeatTemplates extends LitElement {
 
   static get properties() {
     return {
-      messages: Array,
+      messages: { type: Array },
     };
   }
 
@@ -14,7 +14,7 @@ class RepeatTemplates extends LitElement {
     this.messages = ['hello', 'world', 'foo', 'bar'];
   }
 
-  _render({ messages }) {
+  render() {
     return html`
       <div>
         <!--
@@ -24,7 +24,7 @@ class RepeatTemplates extends LitElement {
         -->
         List 1:
         <ul>
-          ${messages.map((message, i) => html`<li>Message ${i}: ${message}</li>`)}
+          ${this.messages.map((message, i) => html`<li>Message ${i}: ${message}</li>`)}
         </ul>
 
         <!--
@@ -33,7 +33,7 @@ class RepeatTemplates extends LitElement {
         -->
         List 2:
         <ul>
-          ${getMessagesTemplate(messages)}
+          ${getMessagesTemplate(this.messages)}
         </ul>
       </div>
     `;

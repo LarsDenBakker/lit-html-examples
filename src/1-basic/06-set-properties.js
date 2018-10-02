@@ -5,19 +5,19 @@ class CustomInput extends LitElement {
 
   static get properties() {
     return {
-      helpText: String,
-      placeholder: String,
+      helpText: { type: String },
+      placeholder: { type: String },
     };
   }
 
-  _render({ helpText, placeholder }) {
+  render() {
     return html`
       <div>
         <div>
-          <input placeholder$="${placeholder}">
+          <input placeholder="${this.placeholder}">
         </div>
         <div>
-          ${helpText}
+          ${this.helpText}
         </div>
       </div>
     `;
@@ -25,7 +25,7 @@ class CustomInput extends LitElement {
 
 }
 
-customElements.define('x-custom-input', CustomInput)
+customElements.define('x-custom-input', CustomInput);
 
 
 
@@ -35,8 +35,8 @@ class SetProperties extends LitElement {
 
   static get properties() {
     return {
-      helpText: String,
-      placeholder: String,
+      helpText: { type: String },
+      placeholder: { type: String },
     }
   }
 
@@ -47,7 +47,7 @@ class SetProperties extends LitElement {
     this.placeholder = 'Username';
   }
 
-  _render({ helpText, placeholder }) {
+  render() {
     return html`
       <!--
         Lit html will set javascript properties on the element for values entered through template expressions.
@@ -59,8 +59,8 @@ class SetProperties extends LitElement {
         See set-attributes example on how to set attributes.
       -->
       <x-custom-input
-        helpText="${helpText}"
-        placeholder="${placeholder}">
+        helpText="${this.helpText}"
+        placeholder="${this.placeholder}">
       </x-custom-input>
     `;
   }

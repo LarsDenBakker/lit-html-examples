@@ -20,14 +20,14 @@ class ConditionalTemplates extends LitElement {
 
   static get properties() {
     return {
-      variant: String,
+      variant: { type: String },
     };
   }
 
-  _render({ variant }) {
+  render() {
     return html`
       <div>
-        <select on-change="${(e) => this.variant = e.target.value}">
+        <select @change="${(e) => this.variant = e.target.value}">
           <option value="a">A</option>
           <option value="b">B</option>
           <option value="c">C</option>
@@ -37,7 +37,7 @@ class ConditionalTemplates extends LitElement {
           You can call functions from templates. By passing around the current value from the properties
           you make sure you always get reflect the up to date return value from the function.
         -->
-        ${getVariantTemplate(variant)}
+        ${getVariantTemplate(this.variant)}
       </div>
     `;
   }

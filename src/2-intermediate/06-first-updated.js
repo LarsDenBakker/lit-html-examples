@@ -1,8 +1,8 @@
 import { LitElement, html } from '@polymer/lit-element';
 
-class FirstRendered extends LitElement {
+class FirstUpdated extends LitElement {
 
-  _render() {
+  render() {
     return html`
       <form id="form">
         Auto focused: <input id="amountInput" type="number" name="amount">
@@ -11,13 +11,13 @@ class FirstRendered extends LitElement {
     `;
   }
 
-  // The _firstRendered method is called after the first time the template was rendered. This
-  // can be used as a moment to handle work that should be done only once after the first render,
+  // The firstUpdated method is called after the element's DOM has been updated the first time. This
+  // can be used as a moment to handle work that should be done only once after the first update,
   // such as querying dom nodes or calling methods on elements.
   //
-  // In general using pure functions and declarative templates through the _render function
+  // In general using pure functions and declarative templates through the render function
   // is preferred. Use this only if there is no other way.
-  _firstRendered() {
+  firstUpdated(changedProperties) {
     // Store a reference to the form element for easy access
     this._form = this.shadowRoot.getElementById('form');
 
@@ -32,4 +32,4 @@ class FirstRendered extends LitElement {
 
 }
 
-customElements.define('x-first-rendered', FirstRendered);
+customElements.define('x-first-updated', FirstUpdated);

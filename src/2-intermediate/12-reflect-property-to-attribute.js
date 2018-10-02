@@ -4,8 +4,8 @@ class ReflectPropertyToAttribute extends LitElement {
 
   static get properties() {
     return {
-      count: Number,
-      message: String,
+      count: { type: Number },
+      message: { type: String },
     };
   }
 
@@ -23,19 +23,19 @@ class ReflectPropertyToAttribute extends LitElement {
 
   /**
    * Sometimes it's useful to reflect js property values back to html attributes.
-   * This can be done from the _propertiesChanged callback, which contains all
+   * This can be done from the update callback, which contains all
    * property change information.
    */
-  _propertiesChanged(props, changedProps, oldProps) {
+  update(changedProperties) {
     // Make sure to call super, as this callback is used by LitElement as well.
-    super._propertiesChanged(props, changedProps, oldProps);
+    super.update(changedProperties);
 
     // In this case we are iterating over all properties and reflecting them.
     Object.keys(this.constructor.properties).forEach((key) => {
 
       // Only update if property changed
-      if (key in changedProps) {
-        const value = changedProps[key];
+      if (changedProperties.has(key)) {
+        const value = changedProperties.get(key);
 
         if (value !== undefined) {
           this.setAttribute(key, value);
@@ -55,7 +55,7 @@ class ReflectPropertyToAttribute extends LitElement {
     // });
   }
 
-  _render({ message, count }) {
+  render() {
     return html`
       <style>
         /* When attributes are reflected to attributes, they can be used from CSS. */
@@ -68,7 +68,7 @@ class ReflectPropertyToAttribute extends LitElement {
         }
       </style>
 
-      ${message}
+      ${this.message}
     `;
   }
 

@@ -4,7 +4,7 @@ class HandleEvents extends LitElement {
 
   static get properties() {
     return {
-      count: Number,
+      count: { type: Number },
     };
   }
 
@@ -14,18 +14,18 @@ class HandleEvents extends LitElement {
     this.count = 0;
   }
 
-  _render({ count }) {
+  render() {
     return html`
       <div>
-        Current count: [${count}]
-        <!-- Use on-[eventname] syntax to declaratively register inline event handlers -->
-        <button on-click="${() => this.count += 1}">+</button>
+        Current count: [${this.count}]
+        <!-- Use @[eventname] syntax to declaratively register inline event handlers -->
+        <button @click="${() => this.count += 1}">+</button>
 
         <!--
           You can also pass a function reference directly. Remember to use .bind(this), otherwise the function
           will not be bound to this element instance
         -->
-        <button on-click="${this._onDecrement.bind(this)}">-</button>
+        <button @click="${this._onDecrement.bind(this)}">-</button>
       </div>
     `;
   }
