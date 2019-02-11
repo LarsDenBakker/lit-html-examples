@@ -26,7 +26,7 @@ class UpdateObjectProperties extends LitElement {
   // two different ways. Both have pros and cons, pick what suits your case.
 
   // Option A is to mutate the user object and request a render manually
-  _onUsernameSubmitA() {
+  async _onUsernameSubmitA() {
     // Update the username to reflect the new value
     const username = this.shadowRoot.getElementById('usernameInput').value;
     this.user.username = username;
@@ -38,9 +38,8 @@ class UpdateObjectProperties extends LitElement {
     // If you want to do follow up actions, such as firing an event, it can be useful to
     // wait for the requested render to complete. Because this is async, you can use the
     // updateComplete promise to wait for the update.
-    this.updateComplete.then(() => {
-      this.dispatchEvent(new CustomEvent('username-updated', { detail: username }));
-    });
+    await this.updateComplete
+    this.dispatchEvent(new CustomEvent('username-updated', { detail: username }));
   }
 
   // Option B is to use immutable data patterns, it avoids mutating existing objects

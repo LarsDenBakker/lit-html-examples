@@ -1,4 +1,5 @@
 import { LitElement, html } from '@polymer/lit-element';
+import {repeat} from 'lit-html/directives/repeat';
 
 class RepeatTemplates extends LitElement {
 
@@ -34,6 +35,13 @@ class RepeatTemplates extends LitElement {
         List 2:
         <ul>
           ${getMessagesTemplate(this.messages)}
+        </ul>
+        <!-- 
+          You could also use the repeat function from lit-html directives.
+        -->
+        List 3:
+        <ul>
+          ${repeat(this.messages, (message, index) => {return html`<li>Message ${index}: ${message}`})}
         </ul>
       </div>
     `;
